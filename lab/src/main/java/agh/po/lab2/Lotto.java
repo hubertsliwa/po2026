@@ -1,8 +1,8 @@
 package agh.po.lab2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
+
 public class Lotto {
     public static void main(String[] args) {
         ArrayList<Integer> lista = new ArrayList<>();
@@ -15,9 +15,20 @@ public class Lotto {
             while(lista.contains(x));
             lista.add(x);
         }
-            for(int i=0; i<args.length; i++){
-            System.out.printf("Twoje liczby: " + args[i]);
-            System.out.println(lista);
+        ArrayList<Integer> liczby = new ArrayList<>();
+        int y;
+        for(int i=0; i<args.length; i++){
+            liczby.add(Integer.parseInt(args[i]));
             }
+        int t=0;
+        for (int i : liczby){
+            if (lista.contains(i)){
+                t++;
+            }
+        }
+        System.out.printf("Twoje liczby: " + liczby + "\n");
+        System.out.printf("Wylosowane liczby: " + lista + "\n");
+        System.out.printf("Trafienia: "+ t);
+
     }
 }
