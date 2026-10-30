@@ -42,7 +42,7 @@ public class CodingBat {
         return count;
     }
 
-    public String makeAbba(String a, String b) {
+    public static String makeAbba(String a, String b) {
         return a+b+b+a;
     }
 
