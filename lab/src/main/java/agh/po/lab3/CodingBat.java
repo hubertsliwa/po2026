@@ -1,5 +1,7 @@
 package agh.po.lab3;
 
+import java.util.Map;
+
 public class CodingBat {
     public static boolean hasTeen(int a, int b, int c) {
         if(a>=13 && a<=19){
@@ -46,4 +48,20 @@ public class CodingBat {
         return a+b+b+a;
     }
 
+    public Map<String, String> mapAB(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            String aValue = map.get("a");
+            String bValue = map.get("b");
+            map.put("ab", aValue + bValue);
+        }
+        return map;
+    }
+
+    public static Map<String, Integer> wordLen(String[] strings) {
+        Map<String, Integer> result = new java.util.HashMap<>();
+        for (String str : strings) {
+            result.put(str, str.length());
+        }
+        return result;
+    }
 }
